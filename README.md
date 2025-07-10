@@ -12,13 +12,14 @@
 4. now boot the phone into fastboot mode by powering it up using power+vol_down buttons
 5. (if it is required, unlock the bootloader)
 6. switch to slot_a `fastboot set_active a`
-7. look into `flash_slot_a.sh` and run every `fastboot` command in there, from top to bottom, do not change the order of flashing or it might not work afterwards.
-	1. ignore the lines starting with #, those are just comments for organization sake
-	2. if you are handy with linux or powershell, just run the script :)
+7. in your console or terminal, navigate to the directory with extracted romAll.zip
+8. look into `flash_slot_a.sh` and run every `fastboot` command in there, from top to bottom, do not change the order of flashing or it might not work afterwards.
+	1. ignore the lines starting with #, those are just leftover comments for organizing everything
+	2. if you are handy with linux or powershell, just run the flashing script inside the romAll directory :)
 
 ### Minor issues
 I only got the slot_a working, slot_b never boots, I might have a clue why that is though
-![[screenshot_super_img.png]]
+![Screenshot of super.img directory tree](/screenshot_super_img.png?raw=true "Optional Title")
 In the super.img it seems that only slot_a partition images have any data on them, I guess if one were to copy them to slot_b files, both slots might be bootable then. Or just switch the names from "a" to "b" so it doesn't touch slot_a and only writes to slot_b partitions. I haven't tested any of that though, this is just an idea for later.
 
 ## Unlocking the bootloader
