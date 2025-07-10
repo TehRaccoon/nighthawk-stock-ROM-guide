@@ -16,6 +16,7 @@
 8. look into `flash_slot_a.sh` and run every `fastboot` command in there, from top to bottom, do not change the order of flashing or it might not work afterwards.
 	1. ignore the lines starting with #, those are just leftover comments for organizing everything
 	2. if you are handy with linux or powershell, just run the flashing script inside the romAll directory :)
+9. reboot the phone `fastboot reboot`
 
 ### Minor issues
 I only got the slot_a working, slot_b never boots, I might have a clue why that is though
