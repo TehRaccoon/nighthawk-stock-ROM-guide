@@ -19,6 +19,8 @@
 
 ## Useful info
 
+After flashing the only boot slot that contains anything will be slot a, so don't forget to switch to it using `fastboot set_active a` or you will bootloop (the script does this automatically).
+
 The order of flashing and which files go into which partitions is written in `rom.json` which is directly inside `HMDSW_nhk_144A-0-00WW-B01_user_devicekit.zip`
 
 Specifically, this is the important part of the `rom.json` from which I created the `flash_all.bat` script. The first command in the script is `fastboot.exe flash modem_a NON-HLOS.bin` which corresponds with the first entry in the "Pre_Partitions" list in the json.
